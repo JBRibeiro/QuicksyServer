@@ -1,5 +1,5 @@
-# QuicksyServer
-QuicksyServer is the backend of the [Quicksy](https://quicksy.im)-App that handles both registration of new users (verified by SMS) and phone number to Jabber ID discovery.
+# Moya Registration
+Moya is the backend of the [MoyaApp](https://binu-messenger-api.appspot.com)-App that handles both registration of new users (verified by SMS) and phone number to Jabber ID discovery.
 
 ## HTTP API
 
@@ -7,7 +7,7 @@ The HTTP API is responsible for registration, password resets and SMS verificati
 
 ### `GET /authentication/$phoneNumber`
 
-Requests an SMS containing a 6 digit code to be send to `$phoneNumber`. The number is formatted according to E.164 (leading +, including the contry code, no spaces). For example `GET /authentication/+18005222443`.
+Requests an SMS containing a 6 digit code to be send to `$phoneNumber`. The number is formatted according to E.164 (including the contry code, no spaces, no leading +, no leading 0s). For example `GET /authentication/27843122306`.
 
 #### Request Header
 
